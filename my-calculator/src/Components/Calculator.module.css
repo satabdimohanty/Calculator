@@ -1,0 +1,115 @@
+/* Remove background */
+body, html {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Calculator container with transition */
+.calculator {
+  width: 400px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f2f2f2;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.4s ease;      /* Smooth transition effect */
+}
+
+/* Hover effect for calculator */
+.calculator:hover {
+  transform: scale(1.05);         /* Slightly enlarge on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+}
+
+/* Display styling */
+.display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;     /* Align both to the right */
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  min-height: 100px;         /* Uniform height */
+  margin-bottom: 15px;
+}
+
+/* Input and Result Styling */
+.display input, .result {
+  width: 100%;
+  text-align: right;         /* Align content to the right */
+  font-size: 32px;           /* Consistent font size */
+  background: transparent;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 5px 0;            /* Consistent spacing */
+  margin: 0;                  /* Remove margin for perfect alignment */
+  transition: all 0.3s ease;  /* Smooth transition */
+}
+
+.result {
+  font-size: 32px;           /* Same size as input */
+  color: white;
+  text-align: right;
+}
+
+.result.error {
+  color: red;
+}
+
+/* Button grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Button styling with hover transition */
+button {
+  font-size: 24px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background: #e0e0e0;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+button:hover {
+  background: #d6d6d6;
+  transform: scale(1.1);     /* Slight scale effect on hover */
+}
+
+/* Equals button with transition */
+.equals {
+  background: #007bff;
+  color: white;
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.equals:hover {
+  background: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Green Clear Button */
+.clear {
+  grid-column: span 4;
+  background: #28a745;
+  color: white;
+  font-size: 28px;
+  padding: 30px;
+  border: none;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.clear:hover {
+  background: #218838;
+  transform: scale(1.05);     /* Slight scale effect on hover */
+}
